@@ -11,6 +11,7 @@ public class PlayerController2 : MonoBehaviour
     private float jumpHeight = 1.0f;
     private float gravityValue = -9.81f;
 
+
     private void Start()
     {
         controller = gameObject.GetComponent<CharacterController>();
@@ -18,6 +19,8 @@ public class PlayerController2 : MonoBehaviour
 
     void Update()
     {
+
+        Animator animator = GetComponent<Animator>();
         groundedPlayer = controller.isGrounded;
         if (groundedPlayer && playerVelocity.y < 0)
         {
@@ -40,5 +43,14 @@ public class PlayerController2 : MonoBehaviour
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
+
+        if (move.x * move.x > 0.2f | move.z * move.z > 0.2f)
+        {
+            animator.SetBool("is_walk", true);
+        }
+        else
+        {
+            animator.SetBool("is_walk", false);
+        }
     }
 }
