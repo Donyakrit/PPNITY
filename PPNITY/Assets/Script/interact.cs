@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class interact : MonoBehaviour
 {
     public bool isinside;
     public GameObject Ecanvas;
     public int TrashWeight;
+    public TMP_Text WeightText;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +32,8 @@ public class interact : MonoBehaviour
         {
             collect();
         }
+
+        WeightText.text = TrashWeight.ToString();
     }
 
     private void OnTriggerEnter(Collider other)
