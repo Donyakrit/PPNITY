@@ -10,6 +10,7 @@ public class PlayerController2 : MonoBehaviour
     public float playerSpeed = 2.0f;
     private float jumpHeight = 1.0f;
     private float gravityValue = -9.81f;
+    public float turnspeed = 10f;
 
     private void Start()
     {
@@ -40,5 +41,7 @@ public class PlayerController2 : MonoBehaviour
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
+        
+
     }
 }
