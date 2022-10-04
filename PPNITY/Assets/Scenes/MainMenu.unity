@@ -804,7 +804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f84fa390161235b409d2b23ac3f1ec9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: in home boy
+  SceneName: 
   LoadingScreen: {fileID: 1414414548}
   MainScreen: {fileID: 576843527}
 --- !u!1 &548849137
