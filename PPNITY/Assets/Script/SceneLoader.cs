@@ -5,11 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    private IEnumerator coroutine;
+
     public string SceneName;
+    public GameObject LoadingScreen;
+    public GameObject MainScreen;
 
     public void sceneload()
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneName);
+        coroutine = Wait(2.0f);
+        StartCoroutine(coroutine);
+    }
+
+    public void StartTheGame()
+    {
+        LoadingScreen.SetActive(true);
+        MainScreen.SetActive(false);
+        coroutine = Wait(2.0f);
+        StartCoroutine(coroutine);
+    }
+
+    private IEnumerator Wait(float waitTime)
+    {
+            yield return new WaitForSeconds(waitTime);
+            SceneManager.LoadScene(SceneName);
     }
 }
