@@ -6,6 +6,7 @@ public class interact : MonoBehaviour
 {
     public bool isinside;
     public GameObject Ecanvas;
+    public int TrashWeight;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,11 @@ public class interact : MonoBehaviour
         {
             Ecanvas.SetActive(false);
         }
+
+        if(Input.GetKeyDown(KeyCode.E) && isinside == true && Backpack.CurrenWeight + TrashWeight <= Backpack.MaxWeight)
+        {
+            collect();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -40,5 +46,11 @@ public class interact : MonoBehaviour
         {
             isinside = false;
         }
+    }
+
+    void collect()
+    {
+        Backpack.CurrenWeight += TrashWeight;
+        Destroy(gameObject);
     }
 }
