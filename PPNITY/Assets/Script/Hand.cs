@@ -19,5 +19,9 @@ public class Hand : MonoBehaviour
     {
         Debug.Log(Inhand);
         Debug.ClearDeveloperConsole();
+        if(Point < 0)
+        {
+            Point = 0;
+        }
     }
 }
