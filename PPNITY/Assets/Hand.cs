@@ -5,6 +5,7 @@ using UnityEngine;
 public class Hand : MonoBehaviour
 {
     public static string Inhand;
+    public static int Point;
     public string LocalInhand;
 
     // Start is called before the first frame update

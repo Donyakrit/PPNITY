@@ -9,6 +9,7 @@ public class FollowPlayerZ : MonoBehaviour
     Vector3 offsetz;
     float x;
     float y;
+    float z;
 
     private void Start()
     {
@@ -19,6 +20,7 @@ public class FollowPlayerZ : MonoBehaviour
 
     private void Update()
     {
-        GetComponent<Transform>().position = new Vector3(x, y, target.position.z + offset.z);
+        z = Mathf.Clamp(target.position.z + offset.z , -15.4f , 100f);
+        GetComponent<Transform>().position = new Vector3(x, y, z);
     }
 }

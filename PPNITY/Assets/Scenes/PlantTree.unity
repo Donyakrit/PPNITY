@@ -1230,7 +1230,11 @@ MonoBehaviour:
   Ecanvas: {fileID: 1605384299}
   Barrear: {fileID: 24402159}
   plantObject: {fileID: 553109863}
+  WaterCanvas: {fileID: 0}
+  WaterFill: {fileID: 0}
   PlantType: Clay
+  waterTime: 0
+  DeadIcon: {fileID: 0}
 --- !u!65 &106672477
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1536,7 +1540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 767562868964138845, guid: 7baba197ce36c92439b423eabaad3737, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 767562868964138845, guid: 7baba197ce36c92439b423eabaad3737, type: 3}
       propertyPath: m_LocalScale.x
@@ -1770,7 +1774,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &175777156
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1784,7 +1788,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 758846011}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1868,7 +1872,11 @@ MonoBehaviour:
   Ecanvas: {fileID: 566035127}
   Barrear: {fileID: 289412239}
   plantObject: {fileID: 1309285465}
+  WaterCanvas: {fileID: 0}
+  WaterFill: {fileID: 0}
   PlantType: Dirt
+  waterTime: 0
+  DeadIcon: {fileID: 0}
 --- !u!1001 &198070298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2575,7 +2583,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!4 &241692953 stripped
 Transform:
@@ -2621,7 +2629,11 @@ MonoBehaviour:
   Ecanvas: {fileID: 1875041931}
   Barrear: {fileID: 888331201}
   plantObject: {fileID: 814376904}
+  WaterCanvas: {fileID: 0}
+  WaterFill: {fileID: 0}
   PlantType: Dirt
+  waterTime: 0
+  DeadIcon: {fileID: 0}
 --- !u!1 &251821286
 GameObject:
   m_ObjectHideFlags: 0
@@ -3744,7 +3756,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 758846011}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4086,7 +4098,11 @@ MonoBehaviour:
   Ecanvas: {fileID: 1434360725}
   Barrear: {fileID: 1702870529}
   plantObject: {fileID: 1044593389}
+  WaterCanvas: {fileID: 0}
+  WaterFill: {fileID: 0}
   PlantType: Clay
+  waterTime: 0
+  DeadIcon: {fileID: 0}
 --- !u!65 &431671027
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4100,6 +4116,79 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.09, y: 0.49, z: 0.93}
   m_Center: {x: 0.006226875, y: 0.014721155, z: -0.011635482}
+--- !u!1001 &438258224
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3928642541961935006, guid: 8877f4aac7d3c184ea4954647487e084, type: 3}
+      propertyPath: m_Name
+      value: WateringCan_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928642541962355902, guid: 8877f4aac7d3c184ea4954647487e084, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928642541962355902, guid: 8877f4aac7d3c184ea4954647487e084, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928642541962355902, guid: 8877f4aac7d3c184ea4954647487e084, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928642541962355902, guid: 8877f4aac7d3c184ea4954647487e084, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928642541962355902, guid: 8877f4aac7d3c184ea4954647487e084, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928642541962355902, guid: 8877f4aac7d3c184ea4954647487e084, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928642541962355902, guid: 8877f4aac7d3c184ea4954647487e084, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928642541962355902, guid: 8877f4aac7d3c184ea4954647487e084, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928642541962355902, guid: 8877f4aac7d3c184ea4954647487e084, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928642541962355902, guid: 8877f4aac7d3c184ea4954647487e084, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928642541962355902, guid: 8877f4aac7d3c184ea4954647487e084, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928642541962355902, guid: 8877f4aac7d3c184ea4954647487e084, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928642541962355902, guid: 8877f4aac7d3c184ea4954647487e084, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928642541962355902, guid: 8877f4aac7d3c184ea4954647487e084, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928642541962355902, guid: 8877f4aac7d3c184ea4954647487e084, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8877f4aac7d3c184ea4954647487e084, type: 3}
 --- !u!1001 &442720893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5128,7 +5217,11 @@ MonoBehaviour:
   Ecanvas: {fileID: 1494607324}
   Barrear: {fileID: 1247714724}
   plantObject: {fileID: 481250746}
+  WaterCanvas: {fileID: 0}
+  WaterFill: {fileID: 0}
   PlantType: Sand
+  waterTime: 0
+  DeadIcon: {fileID: 0}
 --- !u!65 &566246220
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5239,6 +5332,82 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 580072298}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &588876958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 588876959}
+  - component: {fileID: 588876961}
+  - component: {fileID: 588876960}
+  m_Layer: 5
+  m_Name: fill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &588876959
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588876958}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1851874173}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &588876960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588876958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: b015d863eafa57743aa8c0e8a2e27b7f, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 0
+  m_FillOrigin: 2
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &588876961
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588876958}
+  m_CullTransparentMesh: 1
 --- !u!1 &603465456
 GameObject:
   m_ObjectHideFlags: 0
@@ -5946,9 +6115,6 @@ MonoBehaviour:
   Ecanvas: {fileID: 61179113}
   Cropremain: 15
   CropText: {fileID: 64007573}
-  DirtCropPlanted: 0
-  SandCropPlanted: 0
-  ClayCropPlanted: 0
   CropDesire: 0
 --- !u!1 &674904731
 GameObject:
@@ -6436,7 +6602,11 @@ MonoBehaviour:
   Ecanvas: {fileID: 791992014}
   Barrear: {fileID: 1281594683}
   plantObject: {fileID: 140438594}
+  WaterCanvas: {fileID: 0}
+  WaterFill: {fileID: 0}
   PlantType: Dirt
+  waterTime: 0
+  DeadIcon: {fileID: 0}
 --- !u!4 &744420064 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1490849379766892529, guid: b8217b9c1183a5144b666d1dd63980c4, type: 3}
@@ -6545,7 +6715,11 @@ MonoBehaviour:
   Ecanvas: {fileID: 731778860}
   Barrear: {fileID: 580072298}
   plantObject: {fileID: 1378172025}
+  WaterCanvas: {fileID: 0}
+  WaterFill: {fileID: 0}
   PlantType: Clay
+  waterTime: 0
+  DeadIcon: {fileID: 0}
 --- !u!65 &749222449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6688,6 +6862,8 @@ RectTransform:
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 1851874173}
+  - {fileID: 1905466944}
   - {fileID: 175777156}
   - {fileID: 366866138}
   - {fileID: 2055157535}
@@ -8349,7 +8525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 767562868964138845, guid: 7baba197ce36c92439b423eabaad3737, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 767562868964138845, guid: 7baba197ce36c92439b423eabaad3737, type: 3}
       propertyPath: m_LocalScale.x
@@ -8623,7 +8799,7 @@ Transform:
   - {fileID: 732388017}
   - {fileID: 248037447}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &954462390
 GameObject:
@@ -8800,7 +8976,11 @@ MonoBehaviour:
   Ecanvas: {fileID: 95337756}
   Barrear: {fileID: 661712904}
   plantObject: {fileID: 154016436}
+  WaterCanvas: {fileID: 0}
+  WaterFill: {fileID: 0}
   PlantType: Clay
+  waterTime: 0
+  DeadIcon: {fileID: 0}
 --- !u!65 &959995780
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9112,7 +9292,7 @@ Transform:
   - {fileID: 1714231717}
   - {fileID: 1050397937}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1005483343 stripped
 Transform:
@@ -9542,7 +9722,11 @@ MonoBehaviour:
   Ecanvas: {fileID: 1332781282}
   Barrear: {fileID: 809289631}
   plantObject: {fileID: 1272701350}
+  WaterCanvas: {fileID: 0}
+  WaterFill: {fileID: 0}
   PlantType: Sand
+  waterTime: 0
+  DeadIcon: {fileID: 0}
 --- !u!65 &1050397939
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11087,7 +11271,11 @@ MonoBehaviour:
   Ecanvas: {fileID: 964882012}
   Barrear: {fileID: 751264657}
   plantObject: {fileID: 2054350205}
+  WaterCanvas: {fileID: 0}
+  WaterFill: {fileID: 0}
   PlantType: Clay
+  waterTime: 0
+  DeadIcon: {fileID: 0}
 --- !u!65 &1185032985
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11501,7 +11689,7 @@ Transform:
   - {fileID: 959995778}
   - {fileID: 1185032983}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1234061716
 PrefabInstance:
@@ -11753,7 +11941,11 @@ MonoBehaviour:
   Ecanvas: {fileID: 448425467}
   Barrear: {fileID: 1272767672}
   plantObject: {fileID: 1093420221}
+  WaterCanvas: {fileID: 0}
+  WaterFill: {fileID: 0}
   PlantType: Dirt
+  waterTime: 0
+  DeadIcon: {fileID: 0}
 --- !u!1001 &1246747888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12841,7 +13033,11 @@ MonoBehaviour:
   Ecanvas: {fileID: 175777155}
   Barrear: {fileID: 638320515}
   plantObject: {fileID: 1307504202}
+  WaterCanvas: {fileID: 1851874172}
+  WaterFill: {fileID: 588876960}
   PlantType: Dirt
+  waterTime: 15
+  DeadIcon: {fileID: 0}
 --- !u!65 &1373409205
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15376,7 +15572,11 @@ MonoBehaviour:
   Ecanvas: {fileID: 382294336}
   Barrear: {fileID: 329982761}
   plantObject: {fileID: 1701191557}
+  WaterCanvas: {fileID: 0}
+  WaterFill: {fileID: 0}
   PlantType: Sand
+  waterTime: 0
+  DeadIcon: {fileID: 0}
 --- !u!65 &1709211362
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15416,7 +15616,11 @@ MonoBehaviour:
   Ecanvas: {fileID: 1662432827}
   Barrear: {fileID: 1887484532}
   plantObject: {fileID: 977105718}
+  WaterCanvas: {fileID: 0}
+  WaterFill: {fileID: 0}
   PlantType: Sand
+  waterTime: 0
+  DeadIcon: {fileID: 0}
 --- !u!65 &1714231719
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16109,7 +16313,7 @@ Transform:
   - {fileID: 29509085}
   - {fileID: 1901816139}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1830907743
 PrefabInstance:
@@ -16299,6 +16503,83 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e133dac167ef59c40b7678ba58107c6a, type: 3}
+--- !u!1 &1851874172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1851874173}
+  - component: {fileID: 1851874175}
+  - component: {fileID: 1851874174}
+  m_Layer: 5
+  m_Name: water
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1851874173
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851874172}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 588876959}
+  m_Father: {fileID: 758846011}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0.0000038146973}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1851874174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851874172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 375148d003802044882e61ff3a7ec369, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1851874175
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851874172}
+  m_CullTransparentMesh: 1
 --- !u!4 &1863096701 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1490849379766892529, guid: b8217b9c1183a5144b666d1dd63980c4, type: 3}
@@ -16804,6 +17085,82 @@ Transform:
   m_Father: {fileID: 1830845300}
   m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &1905466943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1905466944}
+  - component: {fileID: 1905466946}
+  - component: {fileID: 1905466945}
+  m_Layer: 5
+  m_Name: Dead
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1905466944
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905466943}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 758846011}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1905466945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905466943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: d00f70633dd02a840a468b4c84be0d61, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1905466946
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905466943}
+  m_CullTransparentMesh: 1
 --- !u!1 &1917670243
 GameObject:
   m_ObjectHideFlags: 0
@@ -17748,7 +18105,11 @@ MonoBehaviour:
   Ecanvas: {fileID: 460325804}
   Barrear: {fileID: 301366301}
   plantObject: {fileID: 1302930490}
+  WaterCanvas: {fileID: 0}
+  WaterFill: {fileID: 0}
   PlantType: Sand
+  waterTime: 0
+  DeadIcon: {fileID: 0}
 --- !u!65 &2042319474
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17999,7 +18360,7 @@ RectTransform:
   m_Children:
   - {fileID: 954462391}
   m_Father: {fileID: 758846011}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -18538,7 +18899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3685621049873526707, guid: 9228d54df1ae63f4a9f387b2f24f1484, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3685621049873526707, guid: 9228d54df1ae63f4a9f387b2f24f1484, type: 3}
       propertyPath: m_LocalPosition.x

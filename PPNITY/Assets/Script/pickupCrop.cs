@@ -28,7 +28,7 @@ public class pickupCrop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isinside)
+        if(isinside && Hand.Inhand == "Nothing" && Cropremain > 0)
         {
             Ecanvas.SetActive(true);
         }
@@ -37,7 +37,7 @@ public class pickupCrop : MonoBehaviour
             Ecanvas.SetActive(false);
         }
 
-        if(Input.GetKeyDown(KeyCode.E) && isinside == true && Hand.Inhand == "Nothing")
+        if(Input.GetKeyDown(KeyCode.E) && isinside == true && Hand.Inhand == "Nothing" && Cropremain > 0)
         {
             collect();
         }
