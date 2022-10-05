@@ -17,8 +17,6 @@ public class Hand : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Inhand);
-        Debug.ClearDeveloperConsole();
         if(Point < 0)
         {
             Point = 0;

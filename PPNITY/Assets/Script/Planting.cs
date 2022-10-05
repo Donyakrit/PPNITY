@@ -54,6 +54,24 @@ public class Planting : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E) && isinside == true && isPlanted && wantWater && Hand.Inhand == "WaterCan" && !isdead)
         {
+            if (PlantType == "Dirt")
+            {
+                pickupCrop.DirtCropPlantedSuccess += 1;
+            }
+            else
+            {
+                if (PlantType == "Sand")
+                {
+                    pickupCrop.SandCropPlantedSuccess += 1;
+                }
+                else
+                {
+                    if (PlantType == "Clay")
+                    {
+                        pickupCrop.ClayCropPlantedSuccess += 1;
+                    }
+                }
+            }
             Hand.Point += 1;
             wantWater = false;
             WaterCanvas.SetActive(false);
@@ -135,6 +153,24 @@ public class Planting : MonoBehaviour
 
     void dead()
     {
+        if (PlantType == "Dirt")
+        {
+            pickupCrop.DirtCropPlantedSuccess += 1;
+        }
+        else
+        {
+            if (PlantType == "Sand")
+            {
+                pickupCrop.SandCropPlantedSuccess += 1;
+            }
+            else
+            {
+                if (PlantType == "Clay")
+                {
+                    pickupCrop.ClayCropPlantedSuccess += 1;
+                }
+            }
+        }
         Hand.Point -= 1;
         isdead = true;
         Barrear.SetActive(false);
