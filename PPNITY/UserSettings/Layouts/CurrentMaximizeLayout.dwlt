@@ -25,7 +25,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 36047
+  controlID: 57318
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 36048
+  controlID: 57319
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -379,9 +379,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 0
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: -232, y: -213.33333}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
+      snapCorner: 3
       id: Scene View/Particles
       index: 10
       layout: 4
@@ -389,7 +389,7 @@ MonoBehaviour:
       containerId: overlay-container--right
       floating: 0
       collapsed: 0
-      displayed: 1
+      displayed: 0
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
@@ -406,9 +406,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -13.359775, y: 7.1828475, z: -15.867248}
+    m_Target: {x: -152.74803, y: 88.93718, z: -125.93324}
     speed: 2
-    m_Value: {x: -13.359775, y: 7.1828475, z: -15.867248}
+    m_Value: {x: -152.74803, y: 88.93718, z: -125.93324}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -455,13 +455,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.16969818, y: -0.46200466, z: 0.091394894, w: 0.8667862}
+    m_Target: {x: -0.107748725, y: 0.1234384, z: -0.013469188, w: -0.98644567}
     speed: 2
-    m_Value: {x: 0.16939859, y: -0.46286085, z: 0.091561615, w: 0.8652632}
+    m_Value: {x: -0.10772284, y: 0.12491149, z: -0.013630092, w: -0.9862085}
   m_Size:
-    m_Target: 3.9514039
+    m_Target: 10
     speed: 2
-    m_Value: 3.9514039
+    m_Value: 10
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -571,7 +571,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 178996
+  m_LastSelectedObjectID: -257770
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -596,7 +596,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 36015
+  controlID: 57342
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -653,10 +653,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 224}
-      m_SelectedIDs: 34bb0200
-      m_LastClickedID: 178996
-      m_ExpandedIDs: d689fdff00d8feff52e2feffde89ffffe289ffffe689fffff88fffff6c97ffff38b1ffff16b50000eabc000010d8000056d8000090d90000f4ba020006bb02000cbb020018bb020034bb020040bb020064bb020068bb020070bb020076bb02009abb02009cbb02009ebb0200a8bb0200b4bb0200b8bb0200bcbb0200bebb020006bc02000cbc020024bc020026bc02002abc020040bc02005abc020060bc020066bc020076bc020080bc02009cbc0200c2bc0200d0bc0200d6bc0200ecbc0200eebc02002cbd020032bd020042bd020048bd02004abd02004ebd020050bd020056bd0200
+      scrollPos: {x: 0, y: 765.3334}
+      m_SelectedIDs: 44720300
+      m_LastClickedID: 0
+      m_ExpandedIDs: 4442fcffa058fcffe66efcff6c74fcff7077fcffa678fcffcc79fcffb67afcff4c8dfcff1e8ffcffcc94fcffea97fcff3698fcff269dfcff989efcff0eb7fcffd689fdff00d8feff52e2feffde89ffffe289ffffe689fffff88fffff6c97ffff38b1ffff16b50000eabc000010d8000056d8000090d90000f4ba020006bb02000cbb020018bb020034bb020040bb020064bb020068bb020070bb020076bb02009abb02009cbb02009ebb0200a8bb0200b4bb0200b8bb0200bcbb0200bebb020006bc02000cbc020024bc020026bc02002abc020040bc02005abc020060bc020066bc020076bc020080bc02009cbc0200c2bc0200d0bc0200d6bc0200ecbc0200eebc02002cbd020032bd020042bd020048bd02004abd02004ebd020050bd020056bd0200ba3b0300ce3b0300de4c0300285003005a5a03005e65030054680300
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -747,22 +747,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Character/Main Char
+    - Assets/Fantasy Skybox FREE/Cubemaps/FS003
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Character/Main Char
+  - Assets/Fantasy Skybox FREE/Cubemaps/FS003
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Administrator\Documents\GitHub\PPNITY\PPNITY
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 18.333344}
-    m_SelectedIDs: 30c20000
-    m_LastClickedID: 49712
-    m_ExpandedIDs: 0000000088c100008ac100008cc100008ec1000090c1000092c1000094c1000096c100001ec2000038c200003ec2000042c2000068de000000ca9a3b
+    scrollPos: {x: 0, y: 226.33334}
+    m_SelectedIDs: 44720300
+    m_LastClickedID: 225860
+    m_ExpandedIDs: 0000000088c100008ac100008cc100008ec1000090c1000092c1000094c1000096c100001ec2000038c200003ec2000042c2000068de00004c6b0300367203004c7203005072030000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -790,7 +790,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000088c100008ac100008cc100008ec1000090c1000092c1000094c1000096c1000038c200003ec2000042c2000068de000000ca9a3b
+    m_ExpandedIDs: 0000000088c100008ac100008cc100008ec1000090c1000092c1000094c1000096c1000038c200003ec2000042c2000068de00004c6b0300367203004c7203005072030000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -815,10 +815,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 34bb0200
-    m_LastClickedInstanceID: 178996
+    m_SelectedInstanceIDs: 44720300
+    m_LastClickedInstanceID: 225860
     m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: 10900000fcbe0200
+    m_ExpandedInstanceIDs: 10900000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -842,7 +842,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 500}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 50
