@@ -18,6 +18,8 @@ public class Planting : MonoBehaviour
     float StartCountTime;
     public float waterTime;
     public GameObject DeadIcon;
+    public bool wantWater;
+    bool isdead;
 
 
     // Start is called before the first frame update
@@ -29,12 +31,14 @@ public class Planting : MonoBehaviour
         isPlanted = false;
         WaterCanvas.SetActive(false);
         DeadIcon.SetActive(false);
+        wantWater = false;
+        isdead = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isinside && Hand.Inhand == PlantType && isPlanted == false)
+        if ((isinside && Hand.Inhand != "Nothing" && Hand.Inhand != "WaterCan" && isPlanted == false) | (isinside && Hand.Inhand == "WaterCan" && isPlanted && wantWater && !isdead))
         {
             Ecanvas.SetActive(true);
         }
@@ -43,18 +47,25 @@ public class Planting : MonoBehaviour
             Ecanvas.SetActive(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && isinside == true && isPlanted == false)
+        if (Input.GetKeyDown(KeyCode.E) && isinside == true && isPlanted == false && wantWater == false && Hand.Inhand != "Nothing" && Hand.Inhand != "WaterCan")
         {
             plant();
         }
 
-        if (isPlanted)
+        if (Input.GetKeyDown(KeyCode.E) && isinside == true && isPlanted && wantWater && Hand.Inhand == "WaterCan" && !isdead)
+        {
+            Hand.Point += 1;
+            wantWater = false;
+            WaterCanvas.SetActive(false);
+        }
+
+        if (isPlanted == true && wantWater == true)
         {
             WaterCanvas.SetActive(true);
             WaterFill.fillAmount = (waterTime - (currenTime - StartCountTime)) / waterTime;
         }
 
-        if(isPlanted && WaterFill.fillAmount <= 0)
+        if(!isdead && wantWater && isPlanted && WaterFill.fillAmount <= 0 && wantWater)
         {
             dead();
         }
@@ -117,12 +128,15 @@ public class Planting : MonoBehaviour
 
     void Planted()
     {
+        isPlanted = true;
         StartCountTime = currenTime;
+        wantWater = true;
     }
 
     void dead()
     {
         Hand.Point -= 1;
+        isdead = true;
         Barrear.SetActive(false);
         WaterCanvas.SetActive(false);
         DeadIcon.SetActive(true);
