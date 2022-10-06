@@ -7,6 +7,7 @@ public class OverHeadIcon : MonoBehaviour
     public GameObject Dirt;
     public GameObject Sand;
     public GameObject Clay;
+    public GameObject WaterCan;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +38,14 @@ public class OverHeadIcon : MonoBehaviour
                 else
                 {
                     Clay.SetActive(false);
+                    if (Hand.Inhand == "WaterCan")
+                    {
+                        WaterCan.SetActive(true);
+                    }
+                    else
+                    {
+                        WaterCan.SetActive(false);
+                    }
                 }
             }
         }

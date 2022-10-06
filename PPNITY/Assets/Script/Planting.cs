@@ -20,6 +20,8 @@ public class Planting : MonoBehaviour
     public GameObject DeadIcon;
     public bool wantWater;
     bool isdead;
+    public AudioSource Watering;
+    public AudioSource PlantingSound;
 
 
     // Start is called before the first frame update
@@ -72,6 +74,7 @@ public class Planting : MonoBehaviour
                     }
                 }
             }
+            Watering.Play();
             Hand.Point += 1;
             wantWater = false;
             WaterCanvas.SetActive(false);
@@ -146,6 +149,7 @@ public class Planting : MonoBehaviour
 
     void Planted()
     {
+        PlantingSound.Play();
         isPlanted = true;
         StartCountTime = currenTime;
         wantWater = true;

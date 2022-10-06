@@ -17,6 +17,7 @@ public class pickupCrop : MonoBehaviour
     public static int SandCropPlantedSuccess;
     public static int ClayCropPlantedSuccess;
     public int CropDesire;
+    public AudioSource PickTree;
 
 
     // Start is called before the first frame update
@@ -116,6 +117,7 @@ public class pickupCrop : MonoBehaviour
                 }
             }
         }
+        PickTree.Play();
         Cropremain -= 1;
     }
 
