@@ -9,6 +9,8 @@ public class pickupWatercan : MonoBehaviour
     public bool isinside;
     public GameObject Ecanvas;
     public GameObject Self;
+    public AudioSource PlaceDown;
+    public AudioSource PickUpwater;
 
 
     // Start is called before the first frame update
@@ -60,12 +62,14 @@ public class pickupWatercan : MonoBehaviour
     {
         if (Hand.Inhand == "WaterCan")
         {
+            PlaceDown.Play();
             Hand.Inhand = "Nothing";
             Self.GetComponent<MeshRenderer>().enabled = true;
             Self.GetComponent<MeshCollider>().enabled = true;
         }
         else
         {
+            PickUpwater.Play();
             Hand.Inhand = "WaterCan";
             Self.GetComponent<MeshRenderer>().enabled = false;
             Self.GetComponent<MeshCollider>().enabled = false;

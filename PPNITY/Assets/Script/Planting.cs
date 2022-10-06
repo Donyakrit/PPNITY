@@ -20,6 +20,8 @@ public class Planting : MonoBehaviour
     public GameObject DeadIcon;
     public bool wantWater;
     bool isdead;
+    public AudioSource Watering;
+    public AudioSource PlantingSound;
 
 
     // Start is called before the first frame update
@@ -54,6 +56,25 @@ public class Planting : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E) && isinside == true && isPlanted && wantWater && Hand.Inhand == "WaterCan" && !isdead)
         {
+            if (PlantType == "Dirt")
+            {
+                pickupCrop.DirtCropPlantedSuccess += 1;
+            }
+            else
+            {
+                if (PlantType == "Sand")
+                {
+                    pickupCrop.SandCropPlantedSuccess += 1;
+                }
+                else
+                {
+                    if (PlantType == "Clay")
+                    {
+                        pickupCrop.ClayCropPlantedSuccess += 1;
+                    }
+                }
+            }
+            Watering.Play();
             Hand.Point += 1;
             wantWater = false;
             WaterCanvas.SetActive(false);
@@ -128,6 +149,7 @@ public class Planting : MonoBehaviour
 
     void Planted()
     {
+        PlantingSound.Play();
         isPlanted = true;
         StartCountTime = currenTime;
         wantWater = true;
@@ -135,6 +157,24 @@ public class Planting : MonoBehaviour
 
     void dead()
     {
+        if (PlantType == "Dirt")
+        {
+            pickupCrop.DirtCropPlantedSuccess += 1;
+        }
+        else
+        {
+            if (PlantType == "Sand")
+            {
+                pickupCrop.SandCropPlantedSuccess += 1;
+            }
+            else
+            {
+                if (PlantType == "Clay")
+                {
+                    pickupCrop.ClayCropPlantedSuccess += 1;
+                }
+            }
+        }
         Hand.Point -= 1;
         isdead = true;
         Barrear.SetActive(false);

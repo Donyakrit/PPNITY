@@ -8,12 +8,16 @@ public class pickupCrop : MonoBehaviour
 {
     public bool isinside;
     public GameObject Ecanvas;
-    public int Cropremain;
+    public static int Cropremain;
     public TMP_Text CropText;
     public static int DirtCropPlanted;
     public static int SandCropPlanted;
     public static int ClayCropPlanted;
+    public static int DirtCropPlantedSuccess;
+    public static int SandCropPlantedSuccess;
+    public static int ClayCropPlantedSuccess;
     public int CropDesire;
+    public AudioSource PickTree;
 
 
     // Start is called before the first frame update
@@ -23,6 +27,10 @@ public class pickupCrop : MonoBehaviour
         DirtCropPlanted = 0;
         SandCropPlanted = 0;
         ClayCropPlanted = 0;
+        DirtCropPlantedSuccess = 0;
+        SandCropPlantedSuccess = 0;
+        ClayCropPlantedSuccess = 0;
+        Cropremain = 15;
     }
 
     // Update is called once per frame
@@ -109,6 +117,7 @@ public class pickupCrop : MonoBehaviour
                 }
             }
         }
+        PickTree.Play();
         Cropremain -= 1;
     }
 

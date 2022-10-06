@@ -10,6 +10,8 @@ public class CountDown321 : MonoBehaviour
     public TMP_Text Text321;
     public GameObject Text321Canvas;
     public GameObject PlayerController;
+    public AudioSource BGMusic;
+    public AudioSource CountDown;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,7 @@ public class CountDown321 : MonoBehaviour
     private IEnumerator Wait(float waitTime)
     {
         Text321Canvas.SetActive(true);
+        CountDown.Play();
         Text321.text = "3";
         yield return new WaitForSeconds(1);
         Text321.text = "2";
@@ -36,6 +39,7 @@ public class CountDown321 : MonoBehaviour
         yield return new WaitForSeconds(1);
         Text321.text = "Go!";
         yield return new WaitForSeconds(1);
+        BGMusic.Play();
         PlayerController.GetComponent<PlayerController2>().enabled = true;
         Text321Canvas.SetActive(false);
         PlayerController.GetComponent<CapsuleCollider>().enabled = false;
